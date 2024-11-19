@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Trabalhista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora Trabalhista</h2>
+        
+        <form id="formulario">
+            <label for="valorHora">Valor da Hora (R$):</label>
+            <input type="number" id="valorHora" placeholder="Valor da Hora" required>
+
+            <label for="horasTrabalhadas">Quantidade de Horas Trabalhadas:</label>
+            <input type="number" id="horasTrabalhadas" placeholder="Quantidade de Horas" required>
+
+            <label for="valeTransporte">Recebe Vale Transporte? (S/N):</label>
+            <input type="text" id="valeTransporte" placeholder="S ou N" required>
+
+            <label for="outrasDeducoes">Outras Deduções (R$):</label>
+            <input type="number" id="outrasDeducoes" placeholder="Outras Deduções" required>
+
+            <button type="button" onclick="calcularSalario()">Calcular</button>
+        </form>
+
+        <div id="resultado" style="display: none;">
+            <h3>Resultado do Cálculo Trabalhista</h3>
+            <p><strong>Salário Bruto:</strong> R$ <span id="salarioBruto"></span></p>
+            <p><strong>Desconto INSS:</strong> R$ <span id="descontoINSS"></span></p>
+            <p><strong>Desconto IRPF:</strong> R$ <span id="descontoIRPF"></span></p>
+            <p><strong>Desconto Vale Transporte:</strong> R$ <span id="descontoValeTransporte"></span></p>
+            <p><strong>Outras Deduções:</strong> R$ <span id="outrasDeducoesResultado"></span></p>
+            <p><strong>Salário Líquido:</strong> R$ <span id="salarioLiquido"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
